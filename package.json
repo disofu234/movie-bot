@@ -1,0 +1,18 @@
+{
+  "name": "movie-bot",
+  "version": "1.0.0",
+  "description": "A movie bot for telegram",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^0.2.10",
+    "botgram": "^2.0.0-beta2",
+    "express": "^3.2.6",
+    "get-json": "0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Sosa Fundora",
+  "license": "ISC"
+}
