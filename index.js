@@ -1,7 +1,9 @@
 var botgram = require("botgram");
 var getJSON = require("get-json");
+var express = require("express");
 
 var bot = botgram(process.env.TOKEN);
+var app = express();
 
 bot.command("start", function(msg, reply, next) {
 	var text = "Hello! I can show movie times near you at any part of the U.S. Just simply send your zip code through the [/setzipcode] command.\n\n*ex.* /setzipcode 45532";
@@ -116,6 +118,8 @@ bot.command("start", function(msg, reply, next) {
 		}
 	});
 });
+
+app.listen(process.env.PORT);
 
 function processDate() {
 	var date_obj = new Date();
