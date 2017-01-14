@@ -1,6 +1,7 @@
 var botgram = require("botgram");
 var getJSON = require("get-json");
 var express = require("express");
+var http = require("http");
 
 var bot = botgram(process.env.TOKEN);
 var app = express();
@@ -120,6 +121,10 @@ bot.command("start", function(msg, reply, next) {
 });
 
 app.listen(process.env.PORT);
+
+setInterval(function() {
+	http.get("http://movie-bot-gurnee.herokuapp.com");
+}, 300000);
 
 function processDate() {
 	var date_obj = new Date();
